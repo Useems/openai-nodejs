@@ -8,8 +8,14 @@
     "start": "node src/index.js",
     "doc": "jsdoc -c jsdoc.json"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Marcos André",
+  "license": "MIT",
+  "homepage": "https://useems.github.io/openai-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Useems/openai-nodejs.git"
+  },
+  "keywords": ["gpt-3", "gpt", "gpt3", "openai", "OpenAI", "node", "API", "OpenAI API"],
   "dependencies": {
     "axios": "^0.21.1",
     "form-data": "^4.0.0",
