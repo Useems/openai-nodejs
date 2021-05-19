@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>OpenAI NodeJS: OpenAI</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+
+<header class="layout-header">
+  
+  <h1>
+    <a href="./index.html">
+      OpenAI NodeJS
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <ul><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="OpenAI.html">OpenAI</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#answer">answer</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#classificate">classificate</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#complete">complete</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#decode">decode</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#deleteFile">deleteFile</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#encode">encode</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#getEngine">getEngine</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#getEngines">getEngines</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#getFile">getFile</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#getFiles">getFiles</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#search">search</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#tokens">tokens</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="OpenAI.html#uploadFile">uploadFile</a></span></li></ul><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#Answer">Answer</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#AnswerBody">AnswerBody</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#AnswerDocument">AnswerDocument</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#Classification">Classification</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#ClassificationBody">ClassificationBody</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#ClassificationExample">ClassificationExample</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#Completion">Completion</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#CompletionBody">CompletionBody</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#CompletionChoice">CompletionChoice</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#Engine">Engine</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#File">File</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#Search">Search</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#SearchBody">SearchBody</a></span></li>
+  </nav>
+</header>
+
+
+<main class="layout-main ">
+  <div class="container">
+    <p class="page-kind">Class</p>
+    <h1 class="page-title">OpenAI</h1>
+    
+
+
+
+
+<section>
+
+
+<header class="class">
+
+
+    
+        
+        <!-- <h2>OpenAI</h2> -->
+
+        
+
+        
+
+        
+            
+            <div class="class-description"><p>OpenAI client library.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+
+
+
+    
+        
+
+
+
+
+
+    
+
+
+    
+    <h3 class="subtitle">Constructor</h3>
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="OpenAI">new OpenAI<span class="signature">(key, organization<span class="signature-attributes">opt</span>, engine<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">key</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"><p>API key</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">organization</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        null
+                    </span>
+                
+            
+
+            <div class="param-description"><p>Organization ID</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">engine</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        davinci
+                    </span>
+                
+            
+
+            <div class="param-description"><p>The engine you will use in your requests</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/authentication">https://beta.openai.com/docs/api-reference/authentication</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.19">, line 19</a>
+        </li>
+    </ul>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+        <h3 class="subtitle">Methods</h3>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="answer">answer<span class="signature">(question, body<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>[BETA] Answers the specified question using the provided documents and examples.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">question</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>array</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code><a href="global.html#AnswerBody">AnswerBody</a></code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        {}
+                    </span>
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/answers/create">https://beta.openai.com/docs/api-reference/answers/create</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');const documents = ['Puppy A is happy.', 'Puppy B is sad.'];const examples_context = 'In 2017, U.S. life expectancy was 78.6 years.';const examples = [    ['What is human life expectancy in the United States?', '78 years.']];const stop = ['\n', '&lt;|endoftext|>'];client.answer('Which puppy is happy?', {documents, examples_context, examples, stop}).then(answer => {    console.log(`Answer: ${answer.answers[0]}`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.408">, line 408</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="classificate">classificate<span class="signature">(query, body<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;<a href="global.html#Classification">Classification</a>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>[BETA] Classifies the specified query using provided examples.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">query</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>array</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code><a href="global.html#ClassificationBody">ClassificationBody</a></code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        {}
+                    </span>
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/classifications/create">https://beta.openai.com/docs/api-reference/classifications/create</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Classification></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');const examples = [    ['A happy moment', 'Positive'],    ['I am sad.', 'Negative'],    ['I am feeling awesome', 'Positive']];const labels = ['Positive', 'Negative', 'Neutral'];client.classificate('It is a raining day :(', {examples, labels, 'search_model': 'ada', 'engine': 'curie'}).then(classification => {    console.log(`Classification: ${classification.label}`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.326">, line 326</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="complete">complete<span class="signature">(prompt<span class="signature-attributes">opt</span>, body<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;<a href="global.html#Completion">Completion</a>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Creates a new completion for the provided prompt and parameters.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">prompt</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>array</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        &lt;|endoftext|>
+                    </span>
+                
+            
+
+            <div class="param-description"><p>The prompt(s) to generate completions for, encoded as a string, a list of strings, or a list of token lists.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code><a href="global.html#CompletionBody">CompletionBody</a></code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        {}
+                    </span>
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/completions/create">https://beta.openai.com/docs/api-reference/completions/create</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Completion></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');var prompt = 'My name is Bond';client.complete(prompt, {stop: ['\n', '"'], temperature: 0}).then(completion => {    console.log(`Result: ${prompt}${completion.choices[0].text}`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.191">, line 191</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="decode">decode<span class="signature">(text)</span><span class="return-type-signature"> &rarr; {string}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Decode keys to text.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">text</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Array.&lt;String></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The encoded text</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/introduction/key-concepts">https://beta.openai.com/docs/introduction/key-concepts</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>string</code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');var encoded = client.encode('Hello, world!');var decoded = client.decode(encoded);console.log(`Decoded: ${decoded}`);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.564">, line 564</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="deleteFile">deleteFile<span class="signature">(filename)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Delete a File.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">filename</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/files/delete">https://beta.openai.com/docs/api-reference/files/delete</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.deleteFile('FILE_ID').then(console.log).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.491">, line 491</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="encode">encode<span class="signature">(text)</span><span class="return-type-signature"> &rarr; {Array.&lt;String>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Split text by keys.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">text</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The string to be encoded</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/introduction/key-concepts">https://beta.openai.com/docs/introduction/key-concepts</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Array.&lt;String></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');var encoded = client.encode('Hello, world!');console.log(encoded);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.545">, line 545</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="getEngine">getEngine<span class="signature">(engine)</span><span class="return-type-signature"> &rarr; {Promise.&lt;<a href="global.html#Engine">Engine</a>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Retrieves an engine instance, providing basic information about the engine such as the owner and availability.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">engine</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The ID of the engine to use for this request</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/engines/retrieve">https://beta.openai.com/docs/api-reference/engines/retrieve</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Engine></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.getEngine('davinci').then(engine => {    console.log(`Engine owner: ${engine.owner}`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.124">, line 124</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="getEngines">getEngines<span class="signature">()</span><span class="return-type-signature"> &rarr; {Promise.&lt;Array.&lt;<a href="global.html#Engine">Engine</a>>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Lists the currently available engines, and provides basic information about each one such as the owner and availability.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/engines/list">https://beta.openai.com/docs/api-reference/engines/list</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Array.&lt;Engine>></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.getEngines().then(engines => {    console.log(`Engines: ${engines.map(engine => engine.id).join(', ')}`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.100">, line 100</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="getFile">getFile<span class="signature">(filename)</span><span class="return-type-signature"> &rarr; {Promise.&lt;<a href="global.html#File">File</a>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Returns information about a specific file.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">filename</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/files/retrieve">https://beta.openai.com/docs/api-reference/files/retrieve</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;File></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.getFile('FILE_ID').then(console.log).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.469">, line 469</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="getFiles">getFiles<span class="signature">()</span><span class="return-type-signature"> &rarr; {Promise.&lt;Array.&lt;<a href="global.html#File">File</a>>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Returns a list of files that belong to the user's organization.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/files/list">https://beta.openai.com/docs/api-reference/files/list</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Array.&lt;File>></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.getFiles().then(console.log).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.448">, line 448</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="search">search<span class="signature">(query, body<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;<a href="global.html#Search">Search</a>>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Given a query and a set of documents or labels, the model ranks each document based on its semantic similarity to the provided query.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">query</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>array</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code><a href="global.html#SearchBody">SearchBody</a></code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+                
+                    <span class="param-default">
+                        {}
+                    </span>
+                
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/guides/search/create">https://beta.openai.com/docs/guides/search/create</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Search></code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');const documents = ['Dancing', 'Programming', 'Skating', 'Drawing'];client.search('I do not like CSS', {documents}).then(result => {    var max_score = Math.max(...result.map(e => e.score), 0);    console.log(`Likely subject: ${documents[result.find(e => e.score === max_score).document]} (${max_score})`);}).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.247">, line 247</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="tokens">tokens<span class="signature">(text)</span><span class="return-type-signature"> &rarr; {Number}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Shows the token amount of the inserted text.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">text</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The string to get the token amount</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/introduction/key-concepts">https://beta.openai.com/docs/introduction/key-concepts</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Number</code>
+            
+            
+        </li>
+    
+    </ul>
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');var tokens = client.tokens('Hello, world!');console.log(`Tokens count: ${tokens}`);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.582">, line 582</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="uploadFile">uploadFile<span class="signature">(file, purpose)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Upload a file that contains document(s) to be used across various endpoints/features.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">file</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    |
+
+    <span class="param-type">
+        <code>ReadStream</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>Name of the JSON Lines file to be uploaded.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">purpose</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>String</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The intended purpose of the uploaded documents.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h4 class="method-heading">See</h4>
+        <ul>
+            
+                <li><a href="https://beta.openai.com/docs/api-reference/files/upload">https://beta.openai.com/docs/api-reference/files/upload</a></li>
+            
+        </ul>
+    
+
+    
+</div>
+
+
+
+
+
+
+    <h4 class="method-heading">Example</h4>
+    
+    <pre><code class="language-js">const fs = require('fs');const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');client.uploadFile(fs.createReadStream('file.jsonl'), 'answers').then(console.log).catch(console.error);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="index.js.html">index.js</a><a href="index.js.html#source.515">, line 515</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+  </div>
+</main>
+
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
+  </div>
+</footer>
+
+
+
+<script src="scripts/prism.dev.js"></script>
+</body>
+</html>

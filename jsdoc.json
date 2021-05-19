@@ -1,0 +1,25 @@
+{
+  "source": {
+    "include": ["src"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs/)"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true,
+    "default": {
+      "includeDate": false
+    }
+  },
+  "opts": {
+    "recurse": true,
+    "encoding": "utf8",
+    "destination": "docs/",
+    "readme": "./README.md",
+    "template": "./node_modules/tidy-jsdoc"
+  },
+  "metadata": {
+    "title": "OpenAI NodeJS"
+  }
+}

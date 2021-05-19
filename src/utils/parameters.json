@@ -1,0 +1,6 @@
+{
+	"completion": "{engine: Maybe String, max_tokens: Maybe Number, temperature: Maybe Number, top_p: Maybe Number, n: Maybe Number, stream: Maybe Boolean, logprobs: Maybe Number, echo: Maybe Boolean, stop: Maybe String | Array, presence_penalty: Maybe Number, frequency_penalty: Maybe Number, best_of: Maybe Number, logit_bias: Maybe Object}",
+	"search": "{engine: Maybe String, documents: Maybe Array, file: Maybe String, max_rerank: Maybe Number, return_metadata: Maybe Boolean}",
+	"classification": "{model: Maybe String, examples: Maybe Array, file: Maybe String, labels: Maybe Array, search_model: Maybe String, temperature: Maybe Number, logprobs: Maybe Number, max_examples: Maybe Number, logit_bias: Maybe Object, return_prompt: Maybe Boolean, return_metadata: Maybe Boolean, expand: Maybe Array}",
+	"answer": "{model: Maybe String, examples: Array, examples_context: String, documents: Maybe Array, file: Maybe String, search_model: Maybe String, max_rerank: Maybe Number, temperature: Maybe Number, logprobs: Maybe Number, max_tokens: Maybe Number, stop: Maybe String | Array, n: Maybe Number, logit_bias: Maybe Object, return_metadata: Maybe Boolean, return_prompt: Maybe Boolean, expand: Maybe Array}"
+}
