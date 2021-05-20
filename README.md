@@ -2,8 +2,6 @@
 
 A non-official [OpenAI API](https://beta.openai.com/docs/api-reference/introduction) wrapper for node.
 
-WARNING: It's not ready to be used in production yet.
-
 # Getting Started
 
 ## Installation
