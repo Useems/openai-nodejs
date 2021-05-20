@@ -15,7 +15,16 @@
     "type": "git",
     "url": "https://github.com/Useems/openai-nodejs.git"
   },
-  "keywords": ["gpt-3", "gpt", "gpt3", "openai", "OpenAI", "node", "API", "OpenAI API"],
+  "keywords": [
+    "gpt-3",
+    "gpt",
+    "gpt3",
+    "openai",
+    "OpenAI",
+    "node",
+    "API",
+    "OpenAI API"
+  ],
   "dependencies": {
     "axios": "^0.21.1",
     "form-data": "^4.0.0",

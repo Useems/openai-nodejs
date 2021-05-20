@@ -55,11 +55,27 @@
         <article><h1>OpenAI NodeJS</h1>
 <p>A non-official <a href="https://beta.openai.com/docs/api-reference/introduction">OpenAI API</a> wrapper for node.</p>
 <p>WARNING: It's not ready to be used in production yet.</p>
+<h1>Getting Started</h1>
 <h2>Installation</h2>
 <p>If you have <a href="https://www.npmjs.com/get-npm">npm installed</a>, start using openai-nodejs with the following commands.</p>
 <pre class="prettyprint source lang-bash"><code>npm install openai-nodejs
 </code></pre>
-<h2>Documentation</h2>
+<h2>Usage</h2>
+<p>openai-nodejs follows the latest <a href="https://github.com/nodejs/Release#release-schedule">maintenance LTS</a> version of Node.</p>
+<p><strong>Example</strong> - Complete the phrase &quot;My name is Bond&quot;</p>
+<pre class="prettyprint source lang-js"><code>const OpenAI = require('openai-nodejs');
+const client = new OpenAI('YOUR_API_KEY');
+
+var prompt = 'My name is Bond';
+client.complete(prompt, {stop: ['\n', '&quot;'], temperature: 0})
+.then(completion => {
+    console.log(`Result: ${prompt}${completion.choices[0].text}`);
+})
+.catch(console.error);
+</code></pre>
+<p>The likely answer will be &quot;, James Bond!&quot;</p>
+<p><strong>If you want to see more examples, please check our <a href="https://useems.github.io/openai-nodejs/">documentation</a>.</strong></p>
+<h1>Documentation</h1>
 <p>You can check the full API reference <a href="https://useems.github.io/openai-nodejs/">here</a>.
 <br>
 <br>
