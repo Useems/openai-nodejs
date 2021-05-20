@@ -263,11 +263,12 @@ class OpenAI {
 	/**
 	 * @typedef {Object} Classification
 	 * 
-	 * @property {String} completion
+	 * @property {String|Completion} completion
 	 * @property {String} label
 	 * @property {String} model
 	 * @property {String} object
 	 * @property {String} search_model
+	 * @property {String} [prompt]
 	 * @property {Array<ClassificationExample>} selected_examples
 	 * @see https://beta.openai.com/docs/api-reference/classifications
 	 */
@@ -343,10 +344,11 @@ class OpenAI {
 	 * @typedef {Object} Answer
 	 * 
 	 * @property {Array<String>} answers
-	 * @property {String} completion
+	 * @property {String|Completion} completion
 	 * @property {String} model
 	 * @property {String} object
 	 * @property {String} search_model
+	 * @property {String} [prompt]
 	 * @property {Array<AnswerDocument>} selected_documents
 	 * @see https://beta.openai.com/docs/api-reference/answers
 	 */
