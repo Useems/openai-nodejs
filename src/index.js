@@ -385,6 +385,7 @@ class OpenAI {
 	 * [BETA] Answers the specified question using the provided documents and examples.
 	 * @param {string|array} question
 	 * @param {AnswerBody} [body={}]
+	 * @returns {Promise<Answer>}
 	 * @example
 	 * const OpenAI = require('openai-nodejs');
 	 * const client = new OpenAI('YOUR_API_KEY');
@@ -430,6 +431,8 @@ class OpenAI {
 	 * @property {Number|null} created_at
 	 * @property {String} filename
 	 * @property {String} purpose
+	 * @property {String} status
+	 * @property {String|null} status_details
 	 * @see https://beta.openai.com/docs/api-reference/files
 	 */
 
@@ -466,10 +469,10 @@ class OpenAI {
 	 * .catch(console.error);
 	 * @see https://beta.openai.com/docs/api-reference/files/retrieve
 	 */
-	async getFile(filename) {
-		assert.strictEqual(typeof filename, 'string', 'filename must be a string');
+	async getFile(fileId) {
+		assert.strictEqual(typeof fileId, 'string', 'fileId must be a string');
 
-		return this._request('/files/' + filename, {}, 'GET')
+		return this._request('/files/' + fileId, {}, 'GET')
 		.then(res => res.data)
 		.catch(err => {
 			throw new RequestError(err.response.data.error);
@@ -477,8 +480,18 @@ class OpenAI {
 	}
 
 	/**
+	 * @typedef {Object} DeletedFile
+	 * 
+	 * @property {String} id
+	 * @property {String} object
+	 * @property {Boolean} deleted
+	 * @see https://beta.openai.com/docs/api-reference/files
+	 */
+
+	/**
 	 * Delete a File.
-	 * @param {String} filename
+	 * @param {String} fileId
+	 * @returns {DeletedFile}
 	 * @example
 	 * const OpenAI = require('openai-nodejs');
 	 * const client = new OpenAI('YOUR_API_KEY');
@@ -488,10 +501,10 @@ class OpenAI {
 	 * .catch(console.error);
 	 * @see https://beta.openai.com/docs/api-reference/files/delete
 	 */
-	async deleteFile(filename) {
-		assert.strictEqual(typeof filename, 'string', 'filename must be a string');
+	async deleteFile(fileId) {
+		assert.strictEqual(typeof fileId, 'string', 'fileId must be a string');
 
-		return this._request('/files/' + filename, {}, 'DELETE')
+		return this._request('/files/' + fileId, {}, 'DELETE')
 		.then(res => res.data)
 		.catch(err => {
 			throw new RequestError(err.response.data.error);
@@ -500,8 +513,9 @@ class OpenAI {
 
 	/**
 	 * Upload a file that contains document(s) to be used across various endpoints/features.
-	 * @param {string|ReadStream} file Name of the JSON Lines file to be uploaded.
+	 * @param {string|ReadStream} file The content of the JSON to be uploaded.
 	 * @param {String} purpose The intended purpose of the uploaded documents.
+	 * @returns {File}
 	 * @example
 	 * const fs = require('fs');
 	 * const OpenAI = require('openai-nodejs');
@@ -510,13 +524,27 @@ class OpenAI {
 	 * client.uploadFile(fs.createReadStream('file.jsonl'), 'answers')
 	 * .then(console.log)
 	 * .catch(console.error);
+	 * 
+	 * client.uploadFile('{"text": "A text here"}', 'answers')
+	 * .then(console.log)
+	 * .catch(console.error);
 	 * @see https://beta.openai.com/docs/api-reference/files/upload
 	 */
 	async uploadFile(file, purpose) {
 		assert.ok(typeof file === 'string' || file instanceof stream.Readable, 'file must be a string or readableStream');
 		assert.strictEqual(typeof purpose, 'string', 'purpose must be a string');
-
 		assert.ok(purpose === 'search' || purpose === 'answers' || purpose === 'classifications', 'invalid purpose');
+
+		if (typeof file === 'string') {
+			let content = file;
+
+			file = new stream.Readable();
+
+			file.push(content);
+			file.push(null);
+
+			file.path = 'file.jsonl';
+		}
 
 		let data = new FormData();
 
