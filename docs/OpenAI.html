@@ -713,7 +713,7 @@
 
     <h4 class="method-heading">Example</h4>
     
-    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');const examples = [    ['A happy moment', 'Positive'],    ['I am sad.', 'Negative'],    ['I am feeling awesome', 'Positive']];const labels = ['Positive', 'Negative', 'Neutral'];client.classificate('It is a raining day :(', {examples, labels, 'search_model': 'ada', 'engine': 'curie'}).then(classification => {    console.log(`Classification: ${classification.label}`);}).catch(console.error);</code></pre>
+    <pre><code class="language-js">const OpenAI = require('openai-nodejs');const client = new OpenAI('YOUR_API_KEY');const examples = [    ['A happy moment', 'Positive'],    ['I am sad.', 'Negative'],    ['I am feeling awesome', 'Positive']];const labels = ['Positive', 'Negative', 'Neutral'];client.classificate('It is a raining day :(', {examples, labels, 'search_model': 'ada', 'model': 'curie'}).then(classification => {    console.log(`Classification: ${classification.label}`);}).catch(console.error);</code></pre>
 
 
 
